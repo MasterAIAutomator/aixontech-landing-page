@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Menu, X, Globe } from 'lucide-react';
 
 const Navbar: React.FC = () => {
-  const { language, setLanguage, t } = useLanguage();
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isSerbian = location.pathname.startsWith('/sr');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +18,6 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'sr' : 'en');
-  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -43,41 +42,41 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#home" className="text-[#E9EAEC] hover:text-white transition-colors">
-            {language === 'sr' ? 'Početna' : 'Home'}
+            {isSerbian ? 'Početna' : 'Home'}
           </a>
           <a href="#services" className="text-[#E9EAEC] hover:text-white transition-colors">
-            {language === 'sr' ? 'Usluge' : 'Services'}
+            {isSerbian ? 'Usluge' : 'Services'}
           </a>
           <a href="#cases" className="text-[#E9EAEC] hover:text-white transition-colors">
-            {language === 'sr' ? 'Studije Slučaja' : 'Case Studies'}
+            {isSerbian ? 'Studije Slučaja' : 'Case Studies'}
           </a>
           <a href="#results" className="text-[#E9EAEC] hover:text-white transition-colors">
-            {language === 'sr' ? 'Rezultati Klijenata' : 'Client Results'}
+            {isSerbian ? 'Rezultati Klijenata' : 'Client Results'}
           </a>
           <a href="#contact" className="text-[#E9EAEC] hover:text-white transition-colors">
-            {language === 'sr' ? 'Kontakt' : 'Contact'}
+            {isSerbian ? 'Kontakt' : 'Contact'}
           </a>
           
-          <button 
-            onClick={toggleLanguage}
+          <Link 
+            to={isSerbian ? '/' : '/sr'}
             className="flex items-center space-x-1 bg-[#3D3D3D] hover:bg-[#4D4D4D] text-[#E9EAEC] px-4 py-2 rounded-full transition-colors"
-            aria-label={`Switch to ${language === 'en' ? 'Serbian' : 'English'}`}
+            aria-label={`Switch to ${isSerbian ? 'English' : 'Serbian'}`}
           >
             <Globe size={16} />
-            <span>{language === 'en' ? 'SR' : 'EN'}</span>
-          </button>
+            <span>{isSerbian ? 'EN' : 'SR'}</span>
+          </Link>
         </nav>
 
         {/* Mobile Navigation Icon */}
         <div className="flex items-center space-x-4 md:hidden">
-          <button 
-            onClick={toggleLanguage}
+          <Link 
+            to={isSerbian ? '/' : '/sr'}
             className="flex items-center space-x-1 bg-[#3D3D3D] hover:bg-[#4D4D4D] text-[#E9EAEC] px-3 py-2 rounded-full transition-colors"
-            aria-label={`Switch to ${language === 'en' ? 'Serbian' : 'English'}`}
+            aria-label={`Switch to ${isSerbian ? 'English' : 'Serbian'}`}
           >
             <Globe size={14} />
-            <span className="text-sm">{language === 'en' ? 'SR' : 'EN'}</span>
-          </button>
+            <span className="text-sm">{isSerbian ? 'EN' : 'SR'}</span>
+          </Link>
           
           <button 
             onClick={toggleMobileMenu}
@@ -98,35 +97,35 @@ const Navbar: React.FC = () => {
               className="text-[#E9EAEC] hover:text-white text-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {language === 'sr' ? 'Početna' : 'Home'}
+              {isSerbian ? 'Početna' : 'Home'}
             </a>
             <a 
               href="#services" 
               className="text-[#E9EAEC] hover:text-white text-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {language === 'sr' ? 'Usluge' : 'Services'}
+              {isSerbian ? 'Usluge' : 'Services'}
             </a>
             <a 
               href="#cases" 
               className="text-[#E9EAEC] hover:text-white text-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {language === 'sr' ? 'Studije Slučaja' : 'Case Studies'}
+              {isSerbian ? 'Studije Slučaja' : 'Case Studies'}
             </a>
             <a 
               href="#results" 
               className="text-[#E9EAEC] hover:text-white text-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {language === 'sr' ? 'Rezultati Klijenata' : 'Client Results'}
+              {isSerbian ? 'Rezultati Klijenata' : 'Client Results'}
             </a>
             <a 
               href="#contact" 
               className="text-[#E9EAEC] hover:text-white text-xl transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {language === 'sr' ? 'Kontakt' : 'Contact'}
+              {isSerbian ? 'Kontakt' : 'Contact'}
             </a>
           </nav>
         </div>

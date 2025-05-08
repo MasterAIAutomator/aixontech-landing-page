@@ -45,9 +45,9 @@ const Hero: React.FC = () => {
         >
           {/* Left column */}
           <div className="text-left">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-[#E9EAEC]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-[#E9EAEC]">
               {t('hero.title')}
-            </h2>
+            </h1>
             <p className="text-xl text-[#BCBCBC] mb-10">
               {t('hero.subtitle')}
             </p>
@@ -69,13 +69,13 @@ const Hero: React.FC = () => {
 
           {/* Right column */}
           <div className="bg-[#111]/50 backdrop-blur-sm rounded-lg p-8 border border-[#222]">
-            <h3 className="text-2xl font-bold mb-6 text-[#E9EAEC]">{t('hero.rightTitle')}</h3>
+            <h2 className="text-2xl font-bold mb-6 text-[#E9EAEC]">{t('hero.rightTitle')}</h2>
             
             <div className="space-y-8">
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-[#3D3D3D] font-bold">1</span>
-                  <h4 className="text-[#E9EAEC] font-semibold">{t('hero.benefit1.title')}</h4>
+                  <h3 className="text-[#E9EAEC] font-semibold">{t('hero.benefit1.title')}</h3>
                 </div>
                 <p className="text-[#BCBCBC] pl-7">{t('hero.benefit1.description')}</p>
               </div>
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-[#3D3D3D] font-bold">2</span>
-                  <h4 className="text-[#E9EAEC] font-semibold">{t('hero.benefit2.title')}</h4>
+                  <h3 className="text-[#E9EAEC] font-semibold">{t('hero.benefit2.title')}</h3>
                 </div>
                 <p className="text-[#BCBCBC] pl-7">{t('hero.benefit2.description')}</p>
               </div>
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-[#3D3D3D] font-bold">3</span>
-                  <h4 className="text-[#E9EAEC] font-semibold">{t('hero.benefit3.title')}</h4>
+                  <h3 className="text-[#E9EAEC] font-semibold">{t('hero.benefit3.title')}</h3>
                 </div>
                 <p className="text-[#BCBCBC] pl-7">{t('hero.benefit3.description')}</p>
               </div>
