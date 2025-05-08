@@ -9,6 +9,7 @@ import Services from './components/Services';
 import CaseStudies from './components/CaseStudies';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import JsonLd from './components/JsonLd';
 import { detectUserCountry } from './utils/geolocation';
 
 const App: React.FC = () => {
@@ -49,6 +50,7 @@ const App: React.FC = () => {
   return (
     <LanguageProvider initialLanguage={initialLanguage}>
       <div className="min-h-screen bg-[#080808] text-[#E9EAEC]">
+        <JsonLd />
         <Navbar />
         <main>
           <Hero />
