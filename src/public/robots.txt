@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://aixontech.com/sitemap.xml
+Sitemap: https://aixontech.com/sr/sitemap.xml

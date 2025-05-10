@@ -17,11 +17,23 @@ const JsonLd: React.FC = () => {
       "https://linkedin.com/company/aixontech",
       "https://github.com/aixontech"
     ],
-    "offers": {
-      "@type": "Offer",
-      "name": "AI Automation Solutions",
-      "description": "Comprehensive AI automation solutions for business optimization"
-    }
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Assistants",
+        "description": "24/7 AI assistants for customer support and sales automation"
+      },
+      {
+        "@type": "Offer",
+        "name": "Process Automation",
+        "description": "End-to-end business process automation with AI"
+      },
+      {
+        "@type": "Offer",
+        "name": "Analytics & Prediction",
+        "description": "Advanced analytics and predictive modeling for business intelligence"
+      }
+    ]
   };
 
   return (

@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aixontech.com/</loc>
     <lastmod>2025-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="en"
+      href="https://aixontech.com/"/>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="sr"
+      href="https://aixontech.com/sr"/>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="x-default"
+      href="https://aixontech.com/"/>
   </url>
   <url>
-    <loc>https://aixontech.com/services</loc>
+    <loc>https://aixontech.com/sr</loc>
     <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aixontech.com/case-studies</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aixontech.com/contact</loc>
-    <lastmod>2025-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="en"
+      href="https://aixontech.com/"/>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="sr"
+      href="https://aixontech.com/sr"/>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="x-default"
+      href="https://aixontech.com/"/>
   </url>
 </urlset>
